@@ -1,0 +1,42 @@
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
+[submodule "vim/plugged/ale"]
+	path = vim/plugged/ale
+	url = https://github.com/dense-analysis/ale.git
+[submodule "vim/plugged/auto-pairs"]
+	path = vim/plugged/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/plugged/fzf"]
+	path = vim/plugged/fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "vim/plugged/fzf.vim"]
+	path = vim/plugged/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "vim/plugged/jedi-vim"]
+	path = vim/plugged/jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git
+[submodule "vim/plugged/nerdcommenter"]
+	path = vim/plugged/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+[submodule "vim/plugged/nerdtree"]
+	path = vim/plugged/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/plugged/onedark.vim"]
+	path = vim/plugged/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
+[submodule "vim/plugged/vim-polyglot"]
+	path = vim/plugged/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/plugged/vim-python-pep8-indent"]
+	path = vim/plugged/vim-python-pep8-indent
+	url = https://github.com/Vimjas/vim-python-pep8-indent.git
+[submodule "vim/plugged/vista.vim"]
+	path = vim/plugged/vista.vim
+	url = https://github.com/liuchengxu/vista.vim.git
+[submodule "tmux"]
+	path = tmux
+	url = https://github.com/gpakosz/.tmux.git
+[submodule "powerlevel10k"]
+	path = powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git

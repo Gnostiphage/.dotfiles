@@ -1,0 +1,6 @@
+[user]
+	signingkey = C7DF23F28C3A13E7
+	name = gnostiphage
+	email = gnostiphage@gmail.com
+[credential]
+	helper = cache
