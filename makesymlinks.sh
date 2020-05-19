@@ -32,6 +32,7 @@ done
 
 # copy powerlevel10k into the appropriate oh-my-zsh folder
 cp -r $dir/powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
+cp -r $dir/zsh-syntax-highlighting $dir/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
