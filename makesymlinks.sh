@@ -30,7 +30,7 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-# copy powerlevel10k into the appropriate oh-my-zsh folder
+# copy oh-my-zsh addons into the appropriate oh-my-zsh folder (as you can't load submodules into subdirectories directly)
 cp -r $dir/powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
 cp -r $dir/zsh-syntax-highlighting $dir/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
