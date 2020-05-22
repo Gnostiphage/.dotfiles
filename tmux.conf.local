@@ -293,3 +293,6 @@ set -g status-position top
 
 #set interval to minutes instead of 15s
 set -g status-interval 60
+
+#ensure terminal is weird custom thingie:
+set -g default-terminal xterm-24bit

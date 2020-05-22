@@ -8,7 +8,7 @@
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="vimrc vim zshrc oh-my-zsh p10k.zsh Xresources tmux tmux.conf tmux.conf.local gitconfig"    # list of files/folders to symlink in homedir
+files="vimrc vim zshrc oh-my-zsh Xresources tmux tmux.conf tmux.conf.local gitconfig"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -29,6 +29,12 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+if [ "$EUID" -eq 0 ] ; then
+    ln -s $dir/p10k-root.zsh ~/.p10k.zsh
+else
+    ln -s $dir/p10k.zsh ~/.p10k.zsh
+fi
 
 # copy oh-my-zsh addons into the appropriate oh-my-zsh folder (as you can't load submodules into subdirectories directly)
 cp -r $dir/powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
