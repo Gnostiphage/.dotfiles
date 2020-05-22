@@ -30,6 +30,8 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
+mv ~/.p10k.zsh $olddir/
+
 if [ "$EUID" -eq 0 ] ; then
     ln -s $dir/p10k-root.zsh ~/.p10k.zsh
 else
