@@ -29,14 +29,17 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
-
 mv ~/.p10k.zsh $olddir/
 
+# if root, use root p10k (more colorful)
 if [ "$EUID" -eq 0 ] ; then
     ln -s $dir/p10k-root.zsh ~/.p10k.zsh
 else
     ln -s $dir/p10k.zsh ~/.p10k.zsh
 fi
+
+# copy uxterm.desktop to .local/share/applications, for easy access
+cp $dir/uxterm.desktop ~/.local/share/applications/
 
 # copy oh-my-zsh addons into the appropriate oh-my-zsh folder (as you can't load submodules into subdirectories directly)
 cp -r $dir/powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
