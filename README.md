@@ -3,7 +3,7 @@
 ##### But these ones are mine.
 This is mostly for me, but I figured I'd share it with whoever wants it. It uses xterm with custom colors and fonts, tmux, oh-my-tmux, zsh, oh-my-zsh, powerlevel10k, and more than a few vim plugins for some help with python, or just other general niceties. It's sort of bloated, but I like it.
 
-Make sure you have fzf, grc, and thefuck before running `setup.sh`, or you'll get annoying messages telling you to install them (well, maybe not for grc, but I like that one).
+Make sure you have thefuck before running `setup.sh` or edit it out of zshrc, I'd include it but it can be a pain to install on certain distros. Install grc (generic colorizer) or delete it from zshrc too, it makes output easier to read but can also be annoying to install if you're not using debian or arch.
 
 to clone this thing, run:
 

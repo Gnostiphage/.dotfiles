@@ -46,3 +46,6 @@
 [submodule "p10k-media"]
 	path = p10k-media
 	url = https://github.com/romkatv/powerlevel10k-media.git
+[submodule "fzf"]
+	path = fzf
+	url = https://github.com/junegunn/fzf.git
