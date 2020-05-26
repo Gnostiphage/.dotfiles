@@ -39,7 +39,7 @@ else
 fi
 
 # copy uxterm.desktop to .local/share/applications, for easy access
-cp $dir/uxterm.desktop ~/.local/share/applications/
+cp $dir/uxterm-256color-tmux.desktop ~/.local/share/applications/
 
 # copy oh-my-zsh addons into the appropriate oh-my-zsh folder (as you can't load submodules into subdirectories directly)
 cp -r $dir/powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
