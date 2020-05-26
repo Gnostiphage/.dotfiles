@@ -50,7 +50,7 @@ mkdir -p ~/.fonts
 cp $dir/p10k-media/*.ttf ~/.fonts/
 
 # if fzf isn't installed, install it
-if [ -f /usr/bin/fzf ]; then
+if [ ! -f /usr/bin/fzf ]; then
     ~/.fzf/install
 fi
 
