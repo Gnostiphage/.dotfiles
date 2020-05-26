@@ -8,7 +8,7 @@
 
 dir=~/.dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="vimrc vim zshrc oh-my-zsh Xresources tmux tmux.conf tmux.conf.local gitconfig"    # list of files/folders to symlink in homedir
+files="vimrc vim zshrc oh-my-zsh tmux tmux.conf tmux.conf.local gitconfig"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -79,5 +79,3 @@ fi
 }
 
 install_zsh
-
-tic -x -o ~/.terminfo xterm-24bit.terminfo
