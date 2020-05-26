@@ -13,4 +13,7 @@ or
 
 `git clone --recurse-submodules https://github.com/Gnostiphage/.dotfiles.git`
 
-this way the submodules from other repositories will actually be pulled as well
+this way the submodules from other repositories will also be pulled, nice and fresh
+
+because it's difficult to find with a simple web-search, I'm also adding here that 'bottom' is the fun system monitor I greatly enjoy using, found here:
+https://github.com/ClementTsang/bottom
