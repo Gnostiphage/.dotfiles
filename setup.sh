@@ -45,6 +45,10 @@ cp $dir/uxterm.desktop ~/.local/share/applications/
 cp -r $dir/powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
 cp -r $dir/zsh-syntax-highlighting $dir/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
+#copy required MesloLGS fonts (with NerdFonts) in home .fonts folder
+mkdir -p ~/.fonts
+cp $dir/p10k-media/*.ttf ~/.fonts/
+
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
 if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
