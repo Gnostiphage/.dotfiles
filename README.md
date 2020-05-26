@@ -48,3 +48,6 @@ this way the submodules from other repositories will also be pulled, nice and fr
 
 because it's difficult to find with a simple web-search, I'm also adding here that 'bottom' is the fun system monitor I greatly enjoy using, found here:
 https://github.com/ClementTsang/bottom
+
+#### screenshot:
+![tmux](/screenshots/tmux.png)
