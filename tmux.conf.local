@@ -124,7 +124,7 @@ tmux_conf_theme_window_status_format='#I #W'
 #     - #{username}
 #     - #{username_ssh}
 tmux_conf_theme_window_status_current_fg='#a27aff'      # light violet
-tmux_conf_theme_window_status_current_bg='#404040'      # light violet
+tmux_conf_theme_window_status_current_bg='#404040'      # dark gray
 tmux_conf_theme_window_status_current_attr='bold'
 #tmux_conf_theme_window_status_current_format='#I #W'
 #tmux_conf_theme_window_status_current_format='#{circled_window_index} #W'
@@ -175,8 +175,8 @@ tmux_conf_theme_right_separator_sub='\uE0B3'  #   PowerlineSymbols.otf font, see
 #     - #{uptime_s}
 #     - #{username}
 #     - #{username_ssh}
-tmux_conf_theme_status_left=' ❐ #S | #{loadavg} | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,} '
-tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized} #{?battery_status, #{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , #(date --iso-8601=m) | #(curl wttr.in?format=%%c🌡️%%t%%20%%w%%20%%m\&?m) | #{username}#{root} | #{hostname} '
+tmux_conf_theme_status_left=' ❐ #S | #{loadavg} | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d, #{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,}'
+tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}| #(date --iso-8601=m) | #(curl wttr.in?format=%%c🌡️%%t%%20%%w%%20%%m\&?m) | #{username}#{root} | #{hostname} '
 
 # status left style
 tmux_conf_theme_status_left_fg='#808080,#804000,#008000,#e4e4e4'  # light gray, dark green , white
@@ -184,18 +184,18 @@ tmux_conf_theme_status_left_bg='#303030,#282828,#202020,#cc0000'  # dark gray, d
 tmux_conf_theme_status_left_attr='bold,none,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#8a8a8a,#fff3a8,#e4e4e4,#000000' # light gray, pale yellow, white, black
-tmux_conf_theme_status_right_bg='#080808,#0f0061,#00bd7e,#e4e4e4' # dark gray, dark violet, teal, white
-tmux_conf_theme_status_right_attr='none,none,none,bold'
+tmux_conf_theme_status_right_fg='#00c8ff,#8a8a8a,#fff3a8,#e4e4e4,#000000' # light gray, pale yellow, white, black
+tmux_conf_theme_status_right_bg='#000000,#080808,#0f0061,#00bd7e,#e4e4e4' # dark gray, dark violet, teal, white
+tmux_conf_theme_status_right_attr='bold,none,none,none,bold'
 
 # pairing indicator
-tmux_conf_theme_pairing='👓 '          # U+1F453
+tmux_conf_theme_pairing='👓'          # U+1F453
 tmux_conf_theme_pairing_fg='none'
 tmux_conf_theme_pairing_bg='none'
 tmux_conf_theme_pairing_attr='none'
 
 # prefix indicator
-tmux_conf_theme_prefix='⌨ '            # U+2328
+tmux_conf_theme_prefix='⌘'            # U+2328
 tmux_conf_theme_prefix_fg='none'
 tmux_conf_theme_prefix_bg='none'
 tmux_conf_theme_prefix_attr='none'
@@ -291,5 +291,18 @@ set -g mouse on
 # move status line to top
 set -g status-position top
 
-#set interval to minutes instead of 15s
+# set interval to minutes instead of 15s
 set -g status-interval 60
+
+# save vim session with tmux-resurrect:
+set -g @resurrect-strategy-vim 'session'
+
+# plugin time
+set -g @tpm_plugins '                   \
+    tmux-plugins/tpm                    \
+    tmux-plugins/tmux-yank              \
+    tmux-plugins/tmux-resurrect         \
+'
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'

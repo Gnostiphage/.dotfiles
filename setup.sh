@@ -38,12 +38,15 @@ else
     ln -s $dir/p10k.zsh ~/.p10k.zsh
 fi
 
-# copy uxterm.desktop to .local/share/applications, for easy access
-cp $dir/uxterm-256color-tmux.desktop ~/.local/share/applications/
+# link uxterm.desktop to .local/share/applications, for easy access
+ln -s $dir/uxterm-256color-tmux.desktop ~/.local/share/applications/uxterm-256color-tmux.desktop
 
-# copy oh-my-zsh addons into the appropriate oh-my-zsh folder (as you can't load submodules into subdirectories directly)
-cp -r $dir/powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
-cp -r $dir/zsh-syntax-highlighting $dir/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+# link oh-my-zsh addons into the appropriate oh-my-zsh folder (as you can't load submodules into subdirectories directly)
+ln -s ../../../powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
+ln -s ../../../zsh-syntax-highlighting $dir/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+# link tmux plugins into the appropriate tmux folder (for the same reason):
+ln -s ../tmux-plugins $dir/tmux/plugins
 
 # copy required MesloLGS fonts (with NerdFonts) in home .fonts folder
 mkdir -p ~/.fonts
