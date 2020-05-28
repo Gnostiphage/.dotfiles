@@ -1,16 +1,19 @@
 #!/bin/bash
 ############################
 # setup.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/.dotfiles
+# This script creates symlinks from the home directory to any 
+# desired dotfiles in ~/.dotfiles, while also setting up the 
+# pulled github repos for different plugins, so that they 
+# work appropriately
 ############################
 
-########## Variables
+## Variables
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}"  )" >/dev/null 2>&1 && pwd  )"                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
 files="vimrc vim zshrc oh-my-zsh tmux tmux.conf tmux.conf.local gitconfig Xresources fzf"    # list of files/folders to symlink in homedir
 
-##########
+##
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
@@ -56,6 +59,19 @@ cp $dir/p10k-media/*.ttf ~/.fonts/
 if [ ! -f /usr/bin/fzf ]; then
     ~/.fzf/install
 fi
+
+# setup cron job to update the weather every 15m
+# (my tmux's status-interval of 1s would hog the 
+# expensive weather APIs/bandwidth otherwise)
+crontab -l > $dir/mycron
+if grep "wttr.sh" $dir/mycron ; then
+    echo "wttr.in cron job already setup"
+else
+    echo "creating wttr.in cron job"
+    echo "*/15 * * * * $dir/wttr.sh" >> $dir/mycron
+    crontab $dir/mycron
+fi
+rm $dir/mycron
 
 install_zsh () {
 # Test to see if zshell is installed.  If it is:
