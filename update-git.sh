@@ -14,6 +14,7 @@ git submodule update --remote --recursive
 rm -f $dir/tmux/tmux
 rm -f $dir/vim/vim
 rm -f $dir/oh-my-zsh/oh-my-zsh
+rm -f $dir/tmux-plugins/tmux-plugins
 
 # if any of the parent directories' submodules get updated,
 # they'll need their plugin links again
