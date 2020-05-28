@@ -19,6 +19,8 @@
 [submodule "vim/plugged/fzf.vim"]
 	path = vim/plugged/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+	branch = master
+	update = merge
 [submodule "vim/plugged/jedi-vim"]
 	path = vim/plugged/jedi-vim
 	url = https://github.com/davidhalter/jedi-vim.git
