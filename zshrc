@@ -127,5 +127,5 @@ export GPGKEY=C7DF23F28C3A13E7
 # Run tmux if it's not currently running
 if [ -z "$TMUX" ]
 then
-    tmux new-session -s $USER -d
+    tmux new-session
 fi
