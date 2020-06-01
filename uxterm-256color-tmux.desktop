@@ -34,7 +34,7 @@
 Name=UXTerm
 GenericName=Terminal
 Comment=xterm for unicode, with customizations (add -geometry +1980 for multi-screen)
-Exec=uxterm -fullscreen -fg white -bg black -fa 'MesloLGS NF' -fs 16 -tn xterm-256color -e 'tmux'
+Exec=uxterm -fullscreen -fg white -bg black -fa 'MesloLGS NF' -fs 16 -tn xterm-256color
 Terminal=false
 Type=Application
 Encoding=UTF-8

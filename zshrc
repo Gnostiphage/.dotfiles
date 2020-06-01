@@ -118,7 +118,14 @@ export GPGKEY=C7DF23F28C3A13E7
 # Colorize output with grc (edit /etc/grc.zsh to add partially supported programs)
 [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
 
+# Add fzf shortcuts for quick command/file search completion
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Run tmux if it's not currently running
+if [ -z "$TMUX" ]
+then
+    tmux attach -t $HOST || tmux new -s $HOST
+fi
