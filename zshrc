@@ -77,9 +77,7 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages fzf thefuck tmux zsh-syntax-highlighting)
-
-ZSH_TMUX_AUTOSTART=true
+plugins=(git colored-man-pages fzf tmux thefuck zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -125,3 +123,5 @@ export GPGKEY=C7DF23F28C3A13E7
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+bindkey -s '^[t' 'tmux\n'
