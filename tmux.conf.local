@@ -179,13 +179,13 @@ tmux_conf_theme_status_left=' ❐ #S | #{loadavg} | ↑#{?uptime_y, #{uptime_y}y
 tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}| #(date --iso-8601=s) | #(cat #(readlink -f ~/.tmux)/../../.wttr.txt) | #{username}#{root} | #{hostname} '
 
 # status left style
-tmux_conf_theme_status_left_fg='#808080,#804000,#008000,#e4e4e4'  # light gray, dark green , white
-tmux_conf_theme_status_left_bg='#303030,#282828,#202020,#cc0000'  # dark gray, darker gray, white blue
+tmux_conf_theme_status_left_fg='#808080,#804000,#008000,#e4e4e4'  # light gray, dark orange, dark green , white
+tmux_conf_theme_status_left_bg='#303030,#282828,#202020,#cc0000'  # mid-gray, dark gray, darker gray, white blue
 tmux_conf_theme_status_left_attr='bold,none,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#00c8ff,#8a8a8a,#fff3a8,#e4e4e4,#000000' # light gray, pale yellow, white, black
-tmux_conf_theme_status_right_bg='#000000,#080808,#0f0061,#00bd7e,#e4e4e4' # dark gray, dark violet, teal, white
+tmux_conf_theme_status_right_fg='#00c8ff,#480000,#fff3a8,#e4e4e4,#000000' # light gray, pale yellow, white, black
+tmux_conf_theme_status_right_bg='#000000,#202020,#0f0061,#00bd7e,#e4e4e4' # dark gray, dark violet, teal, white
 tmux_conf_theme_status_right_attr='bold,none,none,none,bold'
 
 # pairing indicator
@@ -282,11 +282,11 @@ set -g mouse on
 #set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
-# set -gu prefix2
-# unbind C-a
-# unbind C-b
-# set -g prefix C-a
-# bind C-a send-prefix
+set -gu prefix2
+unbind C-a
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
 
 # toggle pane-synchronization with C-x
 bind C-x setw synchronize-panes
@@ -306,6 +306,10 @@ set -g @tpm_plugins '                   \
     tmux-plugins/tmux-yank              \
     tmux-plugins/tmux-resurrect         \
 '
+
+# if remoted in (via ssh), customize some things for convenient nesting
+if-shell 'test -n "$SSH_CLIENT"' \
+    'source-file ~/.tmux.conf.remote'
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run '~/.tmux/plugins/tpm/tpm'
