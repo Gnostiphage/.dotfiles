@@ -127,5 +127,5 @@ export GPGKEY=C7DF23F28C3A13E7
 # Run tmux if it's not currently running
 if [ -z "$TMUX" ]
 then
-    tmux attach -t $HOST || tmux new -s $HOST
+    tmux
 fi
