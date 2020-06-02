@@ -43,6 +43,7 @@ fi
 
 # uxterm isnt my friend anymore, now kitty is my best friend
 ln -s $dir/kitty ~/.config/kitty
+ln -s $dir/kitty.desktop ~/.local/share/applications/kitty.desktop
 
 # link oh-my-zsh addons into the appropriate oh-my-zsh folder (as you can't load submodules into subdirectories directly)
 ln -s ../../../powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
