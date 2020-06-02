@@ -108,6 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls="ls --group-directories-first"
 alias history="history -i -n"
+alias litwhich="find $(echo $PATH | sed 's/:/ /g') -name"
 
 #adding 'thefuck'
 eval $(thefuck --alias)
@@ -124,4 +125,7 @@ export GPGKEY=C7DF23F28C3A13E7
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-bindkey -s '^[t' 'tmux\n'
+bindkey -s '^[t' 'tmux attach || tmux new\n'
+
+# To customize prompt, run `p10k configure` or edit ~/.dotfiles/p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

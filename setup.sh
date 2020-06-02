@@ -11,7 +11,7 @@
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}"  )" >/dev/null 2>&1 && pwd  )"                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="vimrc vim zshrc oh-my-zsh tmux tmux.conf tmux.conf.local tmux.conf.remote gitconfig Xresources fzf"    # list of files/folders to symlink in homedir
+files="fonts vimrc vim zshrc oh-my-zsh tmux tmux.conf tmux.conf.local tmux.conf.remote gitconfig fzf"    # list of files/folders to symlink in homedir
 
 ##
 
@@ -32,17 +32,17 @@ for file in $files; do
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
-mv ~/.p10k.zsh $olddir/
 
 # if root, use root p10k (more colorful)
+mv ~/.p10k.zsh $olddir/
 if [ "$EUID" -eq 0 ] ; then
     ln -s $dir/p10k-root.zsh ~/.p10k.zsh
 else
     ln -s $dir/p10k.zsh ~/.p10k.zsh
 fi
 
-# link uxterm.desktop to .local/share/applications, for easy access
-ln -s $dir/uxterm-256color-tmux.desktop ~/.local/share/applications/uxterm-256color-tmux.desktop
+# uxterm isnt my friend anymore, now kitty is my best friend
+ln -s $dir/kitty ~/.config/kitty
 
 # link oh-my-zsh addons into the appropriate oh-my-zsh folder (as you can't load submodules into subdirectories directly)
 ln -s ../../../powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
@@ -56,7 +56,7 @@ mkdir -p ~/.fonts
 cp $dir/p10k-media/*.ttf ~/.fonts/
 
 # if fzf isn't installed, install it
-if [ ! -f /usr/bin/fzf ]; then
+if [[ ! -f /usr/bin/fzf ]]; then
     ~/.fzf/install
 fi
 
@@ -73,40 +73,49 @@ else
 fi
 rm $dir/mycron
 
-install_zsh () {
+install_tool () {
 # Test to see if zshell is installed.  If it is:
-if [ -f /bin/zsh -o -f /usr/bin/zsh ]; then
-    # Clone my oh-my-zsh repository from GitHub only if it isn't already present
-    if [[ ! -d $dir/oh-my-zsh/ ]]; then
-        git clone http://github.com/robbyrussell/oh-my-zsh.git
-    fi
-    # Set the default shell to zsh if it isn't currently set to zsh
-    if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-        chsh -s $(which zsh)
+if [[ -f /bin/$1 -o -f /usr/bin/$1 ]]; then
+    if [[ $1 == "zsh" ]]; then
+        # Set the default shell to zsh if it isn't currently set to zsh
+        if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+            chsh -s $(which zsh)
+        fi
     fi
 else
-    # If zsh isn't installed, get the platform of the current machine
+    # If the tool isn't installed, get the platform of the current machine
     platform=$(uname);
-    # If the platform is Linux, try an apt-get to install zsh and then recurse
+    # If the platform is Linux, try a package manager to install zsh and then recurse
     if [[ $platform == 'Linux' ]]; then
         if [[ -f /etc/redhat-release ]]; then
-            sudo yum install zsh
-            install_zsh
+            sudo yum install $1
         fi
         if [[ -f /etc/debian_version ]]; then
-            sudo apt-get install zsh
-            install_zsh
+            sudo apt-get install $1
         fi
         if [[ -f /etc/arch-release  ]]; then
-            sudo pacman -S zsh
-            install_zsh
+            if [[ ! -f /usr/bin/yay ]]; then
+                if [[ ! -f /usr/bin/git ]]; then
+                    echo "installing git"
+                    sudo pacman -S git
+                fi
+                echo "installing yay"
+                cd ..
+                git clone https://aur.archlinux.org/yay.git
+                cd yay
+                makepkg -si
+                cd $dir
+            fi
+            yay -S $1
         fi
-    # If the platform is OS X, tell the user to install zsh :)
+    # If the platform is OS X, tell the user to install the tool :)
     elif [[ $platform == 'Darwin' ]]; then
-        echo "Please install zsh, then re-run this script!"
+        echo "Please install $1, then re-run this script!"
         exit
     fi
 fi
 }
 
-install_zsh
+for i in {zsh,kitty,vim,tmux,grc}; do
+    install_tool $i
+done
