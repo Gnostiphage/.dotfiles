@@ -19,21 +19,3 @@ else
     rm -f $dir/vim/vim
     rm -f $dir/oh-my-zsh/oh-my-zsh
 fi
-
-# if any of the parent directories' submodules get updated,
-# they'll need their plugin links again
-if git submodule foreach 'git status' | grep -A2 "'oh-my-zsh'" | grep "up to date" ; then
-    echo "oh-my-zsh is good"
-else
-    ln -s ../../../powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
-fi
-if git submodule foreach 'git status' | grep -A2 "'oh-my-zsh'" | grep "up to date" ; then
-    echo "oh-my-zsh is good"
-else
-    ln -s ../../../zsh-syntax-highlighting $dir/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-fi
-if git submodule foreach 'git status' | grep -A2 "'oh-my-zsh'" | grep "up to date" ; then
-    echo "oh-my-zsh is good"
-else
-    ln -s ../tmux-plugins $dir/tmux/plugins
-fi

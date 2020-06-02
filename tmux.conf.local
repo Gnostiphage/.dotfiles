@@ -87,7 +87,7 @@ tmux_conf_theme_mode_attr='bold'
 
 # status line style
 tmux_conf_theme_status_fg='#8a8a8a'                     # light gray
-tmux_conf_theme_status_bg='#080808'                     # dark gray
+tmux_conf_theme_status_bg='#000000'                     # dark gray
 tmux_conf_theme_status_attr='none'
 
 # terminal title
@@ -113,7 +113,7 @@ tmux_conf_theme_window_status_bg='#080808'              # dark gray
 tmux_conf_theme_window_status_attr='none'
 #tmux_conf_theme_window_status_format='#I #W'
 #tmux_conf_theme_window_status_format='#{circled_window_index} #W'
-tmux_conf_theme_window_status_format='#I #W#{?window_bell_flag,🔔,}#{?window_zoomed_flag,🔍,}'
+tmux_conf_theme_window_status_format='#I #W#{?window_bell_flag,🛎️,}#{?window_zoomed_flag,🔍,}'
 
 # window current status style
 #   - built-in variables are:
@@ -184,7 +184,7 @@ tmux_conf_theme_status_left_bg='#303030,#282828,#202020,#cc0000'  # mid-gray, da
 tmux_conf_theme_status_left_attr='bold,none,none,none'
 
 # status right style
-tmux_conf_theme_status_right_fg='#00c8ff,#480000,#fff3a8,#e4e4e4,#000000' # light gray, pale yellow, white, black
+tmux_conf_theme_status_right_fg='#00c8ff,#800000,#fff3a8,#e4e4e4,#000000' # light gray, pale yellow, white, black
 tmux_conf_theme_status_right_bg='#000000,#202020,#0f0061,#00bd7e,#e4e4e4' # dark gray, dark violet, teal, white
 tmux_conf_theme_status_right_attr='bold,none,none,none,bold'
 
