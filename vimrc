@@ -40,6 +40,9 @@ Plug 'dense-analysis/ale'
 " Jedi Client:
 Plug 'davidhalter/jedi-vim'
 
+" REPL:
+Plug 'sillybun/vim-repl'
+
 " Initialize plugin system
 call plug#end()
 
