@@ -94,6 +94,14 @@ syntax on
 filetype plugin on
 
 "------------------------------------------------------------------------------
+" REPL:
+nnoremap <leader>r :REPLToggle<Cr>
+let g:repl_program = {
+			\	'python': ['ipython'],
+			\	'default': ['bash']
+			\	}
+
+"------------------------------------------------------------------------------
 " Markdown:
 function! BetterBullets()
 	set formatoptions+=ro

@@ -9,7 +9,7 @@
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}"   )" >/dev/null 2>&1 && pwd   )"
 
 if ps -ef | grep -v grep | grep tmux ; then
-    curl -s wttr.in?format=%c%t%20%w%20%m\&?m > $dir/../.wttr.txt
+    curl -s wttr.in?format=%c%20%t%20%w%20%m\&?m | sed $'s/\ufe0f//g' > $dir/../.wttr.txt
     exit 0
 else
     exit 0
