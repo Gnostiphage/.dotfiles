@@ -264,11 +264,14 @@ tmux_conf_theme_clock_style='24'
 #   - false (default)
 # on macOS, this requires installing reattach-to-user-namespace, see README.md
 # on Linux, this requires xsel or xclip
-tmux_conf_copy_to_os_clipboard=true
+# tmux_conf_copy_to_os_clipboard=true
 
 
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
+
+# set terminal to kitty
+set -g default-terminal "xterm-kitty"
 
 # increase history size
 #set -g history-limit 10000
@@ -307,7 +310,6 @@ set -g @resurrect-strategy-vim 'session'
 # plugin time
 set -g @tpm_plugins '                   \
     tmux-plugins/tpm                    \
-    tmux-plugins/tmux-yank              \
     tmux-plugins/tmux-resurrect         \
 '
 

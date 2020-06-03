@@ -125,7 +125,7 @@ export GPGKEY=C7DF23F28C3A13E7
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-bindkey -s '^[t' 'tmux attach || tmux new\n'
+bindkey -s '^[t' 'tmux -u attach || tmux -u new\n'
 
 # To customize prompt, run `p10k configure` or edit ~/.dotfiles/p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
