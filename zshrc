@@ -131,4 +131,5 @@ bindkey -s '^[t' 'tmux -u attach || tmux -u new\n'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # For remote clients
-[[ -n $SSH_CLIENT ]] || export TERM=xterm-256color
+export TERM=xterm-256color
+export PAGER='vim -R'
