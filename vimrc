@@ -95,7 +95,7 @@ filetype plugin on
 
 "------------------------------------------------------------------------------
 " REPL:
-nnoremap <leader>r :REPLToggle<Cr>
+nnoremap <leader>p :REPLToggle<Cr>
 let g:repl_program = {
 			\	'python': ['ipython'],
 			\	'default': ['bash']
@@ -124,6 +124,7 @@ set expandtab
 
 " Misc:
 set mouse=a
+set ttymouse=xterm2
 set shiftwidth=4
 set linebreak
 set number
