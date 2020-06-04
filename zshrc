@@ -122,14 +122,19 @@ export GPGKEY=C7DF23F28C3A13E7
 # Add fzf shortcuts for quick command/file search completion
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
+# shortcut for tmux
 bindkey -s '^[t' 'tmux -u attach || tmux -u new\n'
-
-# To customize prompt, run `p10k configure` or edit ~/.dotfiles/p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # For remote clients
 export TERM=xterm-256color
 export PAGER='vim -R'
+
+# p10k is great, but let's keep everything in .dotfiles, 
+# and customize based on who/where we are
+if [ "$EUID" -eq 0 ]; then
+    [[ ! -f ~/.dotfiles/p10k-root.zsh ]] || source ~/.dotfiles/p10k-root.zsh
+elif [ -n "$SSH_CLIENT" ]; then
+    [[ ! -f ~/.dotfiles/p10k-remote.zsh ]] || source ~/.dotfiles/p10k-remote.zsh
+else
+    [[ ! -f ~/.dotfiles/p10k.zsh ]] || source ~/.dotfiles/p10k.zsh
+fi

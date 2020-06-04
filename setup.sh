@@ -33,14 +33,6 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-# if root, use root p10k (more colorful)
-mv ~/.p10k.zsh $olddir/
-if [ "$EUID" -eq 0 ] ; then
-    ln -s $dir/p10k-root.zsh ~/.p10k.zsh
-else
-    ln -s $dir/p10k.zsh ~/.p10k.zsh
-fi
-
 # uxterm isnt my friend anymore, now kitty is my best friend
 ln -s $dir/kitty ~/.config/kitty
 ln -s $dir/kitty.desktop ~/.local/share/applications/kitty.desktop

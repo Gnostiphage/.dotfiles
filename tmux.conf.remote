@@ -4,7 +4,12 @@ set -g default-terminal "xterm-256color"
 # show status on bottom for remote, so as not to stack with local
 set -g status-position bottom
 
-# the remote theme should be much slightly simpler, also flip some colors
+# the remote theme should be much slightly simpler, also flip some colors, and flip the separators for a subtle "remote indicator"
+tmux_conf_theme_left_separator_main='\ue0b8'  # /!\ you don't need to install Powerline
+tmux_conf_theme_left_separator_sub='\ue0b9'   #   you only need fonts patched with
+tmux_conf_theme_right_separator_main='\ue0be' #   Powerline symbols or the standalone
+tmux_conf_theme_right_separator_sub='\ue0b9'  #   PowerlineSymbols.otf font, see README.md
+
 tmux_conf_theme_status_left=' ❐ #S | #{loadavg} | ↑#{?uptime_y, #{uptime_y}y,}#{?uptime_d,#{uptime_d}d,}#{?uptime_h, #{uptime_h}h,}#{?uptime_m, #{uptime_m}m,}'
 tmux_conf_theme_status_right='#{prefix}#{pairing}#{synchronized}| #{username}#{root} | #{hostname} '
 
