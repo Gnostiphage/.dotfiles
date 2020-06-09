@@ -44,7 +44,7 @@ Xft.hintstyle:  hintfull
 Xft.hinting:    1
 Xft.antialias:  1
 Xft.rgba:       rgb
-Xft.dpi:        96
+Xft.dpi:        128
 
 !! URxvt Appearance
 URxvt.font:             xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
@@ -57,6 +57,7 @@ URxvt.geometry:         92x24
 URxvt.internalBorder:   0
 URxvt.cursorBlink:      true
 URxvt.cursorUnderline:  false
+URxvt.pointerBlank:     true
 URxvt.saveline:         2048
 URxvt.scrollBar:        false
 URxvt.scrollBar_right:  false
