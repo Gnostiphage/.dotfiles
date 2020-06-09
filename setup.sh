@@ -11,7 +11,7 @@
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}"  )" >/dev/null 2>&1 && pwd  )"                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="fonts vimrc vim zshrc oh-my-zsh tmux tmux.conf tmux.conf.local tmux.conf.remote gitconfig fzf"    # list of files/folders to symlink in homedir
+files="fonts vimrc vim zshrc oh-my-zsh tmux tmux.conf tmux.conf.local tmux.conf.remote gitconfig fzf Xresources urxvt"    # list of files/folders to symlink in homedir
 
 ##
 
@@ -33,20 +33,12 @@ for file in $files; do
     ln -s $dir/$file ~/.$file
 done
 
-# uxterm isnt my friend anymore, now kitty is my best friend
-ln -s $dir/kitty ~/.config/kitty
-ln -s $dir/kitty.desktop ~/.local/share/applications/kitty.desktop
-
 # link oh-my-zsh addons into the appropriate oh-my-zsh folder (as you can't load submodules into subdirectories directly)
 ln -s ../../../powerlevel10k $dir/oh-my-zsh/custom/themes/powerlevel10k
 ln -s ../../../zsh-syntax-highlighting $dir/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 
 # link tmux plugins into the appropriate tmux folder (for the same reason):
 ln -s ../tmux-plugins $dir/tmux/plugins
-
-# copy required MesloLGS fonts (with NerdFonts) in home .fonts folder
-mkdir -p ~/.fonts
-cp $dir/p10k-media/*.ttf ~/.fonts/
 
 # if fzf isn't installed, install it
 if [[ ! -f /usr/bin/fzf ]]; then
@@ -109,6 +101,6 @@ else
 fi
 }
 
-for i in {zsh,kitty,vim,tmux,grc}; do
+for i in {zsh,urxvt,vim,tmux,grc}; do
     install_tool $i
 done
