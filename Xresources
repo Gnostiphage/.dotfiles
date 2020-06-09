@@ -1,0 +1,78 @@
+!! Colorscheme
+
+! special
+*.foreground:   #ffffff
+*.background:   #161616
+*.cursorColor:  #ffffff
+
+! black
+*.color0:       #222222
+*.color8:       #666666
+
+! red
+*.color1:       #e84f4f
+*.color9:       #d23d3d
+
+! green
+*.color2:       #b7ce42
+*.color10:      #bde077
+
+! yellow
+*.color3:       #fea63c
+*.color11:      #ffe863
+
+! blue
+*.color4:       #66aabb
+*.color12:      #aaccbb
+
+! magenta
+*.color5:       #b7416e
+*.color13:      #e16a98
+
+! cyan
+*.color6:       #6d878d
+*.color14:      #42717b
+
+! white
+*.color7:       #dddddd
+*.color15:      #cccccc
+
+!! Font resources
+Xft.autohint:   1
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting:    1
+Xft.antialias:  1
+Xft.rgba:       rgb
+Xft.dpi:        96
+
+!! URxvt Appearance
+URxvt.font:             xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.boldFont:         xft:BlexMono Nerd Font Mono:style=SemiBold:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.italicFont:       xft:BlexMono Nerd Font Mono:style=Italic:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.boldItalicfont:   xft:BlexMono Nerd Font Mono:style=SemiBold Italic:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.letterSpace:      -1
+URxvt.lineSpace:        0
+URxvt.geometry:         92x24
+URxvt.internalBorder:   0
+URxvt.cursorBlink:      true
+URxvt.cursorUnderline:  false
+URxvt.saveline:         2048
+URxvt.scrollBar:        false
+URxvt.scrollBar_right:  false
+URxvt.urgentOnBell:     true
+URxvt.depth:            32
+URxvt.background:       [90]#161616
+URxvt.iso14755:         false
+
+!! URxvt Plugins
+URxvt.perl-ext-common:  default,matcher,fullscreen,fs-onstart
+URxvt.url-launcher:     /usr/bin/xdg-open
+URxvt.matcher.button:   1
+URxvt.keysym.F11:       perl:fullscreen:switch
+
+!! Fix tmux home+end keys
+URxvt.keysym.Home:      \033[1~
+URxvt.keysym.End:       \033[4~
+URxvt.keysym.KP_Home:   \033[1~
+URxvt.keysym.KP_End:    \033[4~

@@ -1,6 +1,3 @@
-# ensure remote clients can still show colors even if kitty can't easily be installed:
-set -g default-terminal "xterm-256color"
-
 # show status on bottom for remote, so as not to stack with local
 set -g status-position bottom
 

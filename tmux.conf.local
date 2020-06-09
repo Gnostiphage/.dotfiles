@@ -270,9 +270,6 @@ tmux_conf_theme_clock_style='24'
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
 
-# set terminal to kitty
-set -g default-terminal "xterm-kitty"
-
 # increase history size
 #set -g history-limit 10000
 
@@ -322,10 +319,15 @@ set -g status-interval 1
 # save vim session with tmux-resurrect:
 set -g @resurrect-strategy-vim 'session'
 
+# yank in copy mode (with tmux-yank)
+set -g @shell_mode 'vi'
+set -g @yank_selection 'primary'
+
 # plugin time
 set -g @tpm_plugins '                   \
     tmux-plugins/tpm                    \
     tmux-plugins/tmux-resurrect         \
+    tmux-plugins/tmux-yank              \
 '
 
 # if remoted in (via ssh), customize some things for convenient nesting

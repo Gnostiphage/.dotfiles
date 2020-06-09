@@ -13,6 +13,8 @@ setopt extended_glob
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME"/.oh-my-zsh"
 
+ZLE_RPROMPT_INDENT=0
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -123,11 +125,7 @@ export GPGKEY=C7DF23F28C3A13E7
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # shortcut for tmux
-bindkey -s '^[t' 'tmux -u attach || tmux -u new\n'
-
-# For remote clients
-export TERM=xterm-256color
-export PAGER='vim -R'
+bindkey -s '^[t' 'TERM=screen-256color tmux -u attach || TERM=screen-256color tmux -u new\n'
 
 # p10k is great, but let's keep everything in .dotfiles, 
 # and customize based on who/where we are

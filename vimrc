@@ -123,6 +123,7 @@ set softtabstop=4
 set expandtab
 
 " Misc:
+colorscheme onedark
 set mouse=a
 set ttymouse=xterm2
 set shiftwidth=4
