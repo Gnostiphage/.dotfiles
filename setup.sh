@@ -40,6 +40,9 @@ ln -s ../../../zsh-syntax-highlighting $dir/oh-my-zsh/custom/plugins/zsh-syntax-
 # link tmux plugins into the appropriate tmux folder (for the same reason):
 ln -s ../tmux-plugins $dir/tmux/plugins
 
+# link ranger config files appropriately
+ln -s $dir/ranger ~/.config/ranger
+
 # if fzf isn't installed, install it
 if [[ ! -f /usr/bin/fzf ]]; then
     ~/.fzf/install
