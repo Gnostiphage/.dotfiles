@@ -122,8 +122,15 @@ set tabstop=4
 set softtabstop=4
 set expandtab
 
-" Misc:
+" Colors:
+syntax on
+let g:onedark_hide_endofbuffer=1
+let g:onedark_termcolors=256
+let g:onedark_terminal_italics=1
 colorscheme onedark
+
+" Misc:
+set fillchars+=vert:│
 set mouse=a
 set ttymouse=xterm2
 set shiftwidth=4
@@ -135,4 +142,4 @@ set splitbelow
 set splitright
 set belloff=all
 set background=dark
-set t_Co=256
+set term=xterm-256color
