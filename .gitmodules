@@ -32,9 +32,6 @@
 	url = https://github.com/preservim/nerdtree.git
 	branch = master
 	update = merge
-[submodule "vim/plugged/onedark.vim"]
-	path = vim/plugged/onedark.vim
-	url = https://github.com/joshdick/onedark.vim.git
 [submodule "vim/plugged/vim-polyglot"]
 	path = vim/plugged/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot.git
@@ -48,9 +45,6 @@
 	url = https://github.com/liuchengxu/vista.vim.git
 	branch = master
 	update = merge
-[submodule "tmux"]
-	path = tmux
-	url = https://github.com/gpakosz/.tmux.git
 [submodule "powerlevel10k"]
 	path = powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
@@ -79,4 +73,36 @@
 [submodule "vim/plugged/vim-repl"]
 	path = vim/plugged/vim-repl
 	url = https://github.com/sillybun/vim-repl.git
+	branch = master
+[submodule "tmux-plugins/nord-tmux"]
+	path = tmux-plugins/nord-tmux
+	url = https://github.com/arcticicestudio/nord-tmux.git
+	branch = master
+[submodule "tmux-plugins/tmux-prefix-highlight"]
+	path = tmux-plugins/tmux-prefix-highlight
+	url = https://github.com/tmux-plugins/tmux-prefix-highlight
+	branch = master
+[submodule "tmux-plugins/tmux-cpu"]
+	path = tmux-plugins/tmux-cpu
+	url = https://github.com/tmux-plugins/tmux-cpu
+	branch = master
+[submodule "vim/plugged/vim-tmux-focus-events"]
+	path = vim/plugged/vim-tmux-focus-events
+	url = https://github.com/tmux-plugins/vim-tmux-focus-events
+	branch = master
+[submodule "vim/plugged/vim-tmux-clipboard"]
+	path = vim/plugged/vim-tmux-clipboard
+	url = https://github.com/roxma/vim-tmux-clipboard
+	branch = master
+[submodule "tmux-plugins/tmux-open"]
+	path = tmux-plugins/tmux-open
+	url = https://github.com/tmux-plugins/tmux-open
+	branch = master
+[submodule "vim/plugged/nord-vim"]
+	path = vim/plugged/nord-vim
+	url = https://github.com/arcticicestudio/nord-vim
+	branch = master
+[submodule "tmux-plugins/tmux-uptime"]
+	path = tmux-plugins/tmux-uptime
+	url = https://github.com/robhurring/tmux-uptime
 	branch = master

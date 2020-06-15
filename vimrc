@@ -10,7 +10,10 @@ call plug#begin('~/.vim/plugged')
 " install via :PlugInstall in vim
 
 " Colors:
-Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
+
+" TMUX:
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " NERDTree:
 Plug 'preservim/nerdtree'
@@ -123,11 +126,20 @@ set softtabstop=4
 set expandtab
 
 " Colors:
+if (has("autocmd") && !has("gui_running"))
+  augroup colorset
+    autocmd!
+    let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+    autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " `bg` will not be styled since there is no `bg` setting
+  augroup END
+endif
+
 syntax on
 let g:onedark_hide_endofbuffer=1
 let g:onedark_termcolors=256
 let g:onedark_terminal_italics=1
 colorscheme onedark
+colorscheme nord
 
 " Misc:
 set fillchars+=vert:│
@@ -141,5 +153,6 @@ set ignorecase
 set splitbelow
 set splitright
 set belloff=all
-set background=dark
 set term=xterm-256color
+set t_8b=[48;2;%lu;%lu;%lum
+set t_8f=[38;2;%lu;%lu;%lum

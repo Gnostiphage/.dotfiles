@@ -1,56 +1,42 @@
-!! Colorscheme
+!! Colorscheme - ice
 
-! special
-*.foreground:   #ffffff
-*.background:   #161616
-*.cursorColor:  #ffffff
+*.foreground:   #D8DEE9
+*.background:   #2E3440
+*.cursorColor:  #D8DEE9
+*fading:        35
+*fadeColor:     #4C566A
 
-! black
-*.color0:       #222222
-*.color8:       #666666
-
-! red
-*.color1:       #e84f4f
-*.color9:       #d23d3d
-
-! green
-*.color2:       #b7ce42
-*.color10:      #bde077
-
-! yellow
-*.color3:       #fea63c
-*.color11:      #ffe863
-
-! blue
-*.color4:       #66aabb
-*.color12:      #aaccbb
-
-! magenta
-*.color5:       #b7416e
-*.color13:      #e16a98
-
-! cyan
-*.color6:       #6d878d
-*.color14:      #42717b
-
-! white
-*.color7:       #dddddd
-*.color15:      #cccccc
+*.color0:       #3B4252
+*.color1:       #BF616A
+*.color2:       #A3BE8C
+*.color3:       #EBCB8B
+*.color4:       #81A1C1
+*.color5:       #B48EAD
+*.color6:       #88C0D0
+*.color7:       #E5E9F0
+*.color8:       #4C566A
+*.color9:       #BF616A
+*.color10:      #A3BE8C
+*.color11:      #EBCB8B
+*.color12:      #81A1C1
+*.color13:      #B48EAD
+*.color14:      #8FBCBB
+*.color15:      #ECEFF4
 
 !! Font resources
-Xft.autohint:   1
-Xft.lcdfilter:  lcddefault
-Xft.hintstyle:  hintfull
+Xft.autohint:   0
+Xft.lcdfilter:  lcdnone
+Xft.hintstyle:  hintnone
 Xft.hinting:    1
 Xft.antialias:  1
 Xft.rgba:       rgb
 Xft.dpi:        128
 
 !! URxvt Appearance
-URxvt.font:             xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
-URxvt.boldFont:         xft:BlexMono Nerd Font Mono:style=SemiBold:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
-URxvt.italicFont:       xft:BlexMono Nerd Font Mono:style=Italic:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
-URxvt.boldItalicfont:   xft:BlexMono Nerd Font Mono:style=SemiBold Italic:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.font:             xft:IBM Plex Mono:style=Text:pixelsize=21,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.boldFont:         xft:IBM Plex Mono:style=SemiBold:pixelsize=21,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.italicFont:       xft:IBM Plex Mono:style=Text Italic:pixelsize=21,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.boldItalicfont:   xft:IBM Plex Mono:style=SemiBold Italic:pixelsize=21,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
 URxvt.letterSpace:      -1
 URxvt.lineSpace:        0
 URxvt.geometry:         92x24
@@ -63,7 +49,7 @@ URxvt.scrollBar:        false
 URxvt.scrollBar_right:  false
 URxvt.urgentOnBell:     true
 URxvt.depth:            32
-URxvt.background:       [90]#161616
+URxvt.background:       [90]#2E3440
 URxvt.iso14755:         false
 
 !! URxvt Plugins
