@@ -10,8 +10,8 @@
 ## Variables
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}"  )" >/dev/null 2>&1 && pwd  )"                    # dotfiles directory
-olddir=~/.dotfiles_old             # old dotfiles backup directory
-files="fonts vimrc vim zshrc oh-my-zsh tmux tmux.conf tmux.conf.local tmux.conf.remote gitconfig fzf Xresources urxvt"    # list of files/folders to symlink in homedir
+olddir=~/.dotfiles.bak             # old dotfiles backup directory
+files="fonts vimrc vim zshrc oh-my-zsh tmux tmux.conf gitconfig fzf Xresources urxvt"    # list of files/folders to symlink in homedir
 
 ##
 
