@@ -61,6 +61,9 @@ else
 fi
 rm $dir/mycron
 
+# ensure Xresources is loaded
+xrdb -merge ~/.Xresources
+
 install_tool () {
 # Test to see if zshell is installed.  If it is:
 if [[ -f /bin/$1 -o -f /usr/bin/$1 ]]; then
