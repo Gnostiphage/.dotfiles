@@ -104,6 +104,6 @@ else
 fi
 }
 
-for i in {zsh,urxvt,vim,tmux,grc}; do
+for i in {zsh,urxvt,vim,tmux,wmctrl,grc}; do
     install_tool $i
 done
