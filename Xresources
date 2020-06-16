@@ -1,27 +1,45 @@
 !! Colorscheme - ice
 
-*.foreground:   #D8DEE9
-*.background:   #2E3440
-*.cursorColor:  #D8DEE9
+! special
+*.foreground:   #d8dee9
+*.background:   #2e3440
+*.cursorColor:  #d8dee9
+
 *fading:        35
 *fadeColor:     #4C566A
 
-*.color0:       #3B4252
-*.color1:       #BF616A
-*.color2:       #A3BE8C
-*.color3:       #EBCB8B
-*.color4:       #81A1C1
-*.color5:       #B48EAD
-*.color6:       #88C0D0
-*.color7:       #E5E9F0
-*.color8:       #4C566A
-*.color9:       #BF616A
-*.color10:      #A3BE8C
-*.color11:      #EBCB8B
-*.color12:      #81A1C1
-*.color13:      #B48EAD
-*.color14:      #8FBCBB
-*.color15:      #ECEFF4
+
+! black
+*.color0:       #3b4252
+*.color8:       #4c566a
+
+! red
+*.color1:       #bf616a
+*.color9:       #d66d77
+
+! green
+*.color2:       #a3be8c
+*.color10:      #b8d79e
+
+! yellow
+*.color3:       #ebcb8b
+*.color11:      #ffdc97
+
+! blue
+*.color4:       #81a1c1
+*.color12:      #9ac1e7
+
+! magenta
+*.color5:       #b48ead
+*.color13:      #d6a9cd
+
+! cyan
+*.color6:       #88c0d0
+*.color14:      #8fbcbb
+
+! white
+*.color7:       #e5e9f0
+*.color15:      #eceff4
 
 !! Font resources
 Xft.autohint:   0
