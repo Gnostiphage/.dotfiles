@@ -10,7 +10,7 @@ set -g @prefix_highlight_copy_mode_attr "fg=brightcyan,bg=black,bold"
 
 # -- status -------------------------------------------------------------------
 set -g status-left "#[fg=black,bg=blue,bold] #S #[fg=blue,bg=brightblack,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] cpu: #{cpu_fg_color}#{cpu_percentage} #[fg=white,bg=brightblack,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] ram: #{ram_fg_color}#{ram_percentage} #[fg=white,bg=brightblack,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] uptime: #[fg="#7AFFA2"]#{uptime} #[fg=brightblack,bg=black,nobold,noitalics,nounderscore]"
-set -g status-right "#{prefix_highlight}#[fg=brightblack,bg=black,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] #(whoami) #[fg=cyan,bg=brightblack,nobold,noitalics,nounderscore]#[fg="#00B548",bg=cyan,bold] #H "
+set -g status-right "#{prefix_highlight}#[fg=brightblack,bg=black,nobold,noitalics,nounderscore]#[fg=white,bg=brightblack] #(whoami) #[fg=cyan,bg=brightblack,nobold,noitalics,nounderscore]#[fg="#00B548",bg=cyan,bold] #(hostname) "
 
 # -- window -------------------------------------------------------------------
 set -g window-status-format "#[fg=black,bg=brightblack,nobold,noitalics,nounderscore] #[fg=white,bg=brightblack]#I #[fg=white,bg=brightblack,nobold,noitalics,nounderscore] #[fg=white,bg=brightblack]#W #F #[fg=brightblack,bg=black,nobold,noitalics,nounderscore]"
