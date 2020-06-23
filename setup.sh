@@ -66,7 +66,7 @@ xrdb -merge ~/.Xresources
 
 install_tool () {
 # Test to see if zshell is installed.  If it is:
-if [[ -f /bin/$1 -o -f /usr/bin/$1 ]]; then
+if [ -f /bin/$1 -o -f /usr/bin/$1 ]; then
     if [[ $1 == "zsh" ]]; then
         # Set the default shell to zsh if it isn't currently set to zsh
         if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
