@@ -48,7 +48,7 @@ Xft.hintstyle:  hintnone
 Xft.hinting:    1
 Xft.antialias:  1
 Xft.rgba:       rgb
-Xft.dpi:        128
+*.dpi:        128
 
 !! URxvt Appearance
 URxvt.font:             xft:IBM Plex Mono:style=Text:pixelsize=21,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
