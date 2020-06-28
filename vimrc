@@ -148,6 +148,7 @@ set ttymouse=xterm2
 set shiftwidth=4
 set linebreak
 set number
+set relativenumber
 set cursorline
 set ignorecase
 set splitbelow
