@@ -141,6 +141,10 @@ let g:onedark_terminal_italics=1
 colorscheme onedark
 colorscheme nord
 
+" Timestamp:
+nnoremap <F5> "=strftime("%FT%T%z")<CR>P
+inoremap <F5> <C-R>=strftime("%FT%T%z")<CR>
+
 " Misc:
 set fillchars+=vert:│
 set mouse=a
