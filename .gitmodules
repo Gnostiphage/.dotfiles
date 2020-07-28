@@ -98,10 +98,6 @@
 	path = vim/plugged/nord-vim
 	url = https://github.com/arcticicestudio/nord-vim
 	branch = master
-[submodule "tmux-plugins/tmux-uptime"]
-	path = tmux-plugins/tmux-uptime
-	url = https://github.com/robhurring/tmux-uptime
-	branch = master
 [submodule "nord-gnome-terminal"]
 	path = nord-gnome-terminal
 	url = https://github.com/arcticicestudio/nord-gnome-terminal.git
