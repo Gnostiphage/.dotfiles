@@ -4,8 +4,8 @@ set -g status-justify left
 set -g pane-active-border-style fg="#A27AFF",bg=default
 
 #-- tmux-prefix-highlight -----------------------------------------------------
-set -g @prefix_highlight_output_prefix "#[fg=brightcyan]#[bg=black]#[nobold]#[noitalics]#[nounderscore]#[bg=brightcyan]#[fg=black]"
-set -g @prefix_highlight_output_suffix "" 
+set -g @prefix_highlight_output_prefix "#[fg=brightcyan]#[bg=black]#[nobold]#[noitalics]#[nounderscore]#[bg=brightcyan]#[fg=black]"
+set -g @prefix_highlight_output_suffix "" 
 set -g @prefix_highlight_copy_mode_attr "fg=brightcyan,bg=black,bold"
 
 # -- status -------------------------------------------------------------------
