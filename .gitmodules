@@ -102,3 +102,6 @@
 	path = nord-gnome-terminal
 	url = https://github.com/arcticicestudio/nord-gnome-terminal.git
 	branch = master
+[submodule "tmux-plugins/tmux-plugin-uptime"]
+	path = tmux-plugins/tmux-plugin-uptime
+	url = https://github.com/pwittchen/tmux-plugin-uptime.git
