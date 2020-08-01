@@ -115,8 +115,8 @@ alias litwhich="find $(echo $PATH | sed 's/:/ /g') -name"
 #adding 'thefuck'
 eval $(thefuck --alias)
 
-#default GPG key, for gnostiphage
-export GPGKEY=C7DF23F28C3A13E7
+# Source local variables, for everything extra
+[[ -f ~/.local.zsh ]] && source .local.zsh
 
 # Colorize output with grc (edit /etc/grc.zsh to add partially supported programs)
 [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
