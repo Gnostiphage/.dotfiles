@@ -116,7 +116,7 @@ alias litwhich="find $(echo $PATH | sed 's/:/ /g') -name"
 eval $(thefuck --alias)
 
 # Source local variables, for everything extra
-[[ -f ~/.local.zsh ]] && source .local.zsh
+[[ -f ~/.local.zsh ]] && source ~/.local.zsh
 
 # Colorize output with grc (edit /etc/grc.zsh to add partially supported programs)
 [[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
