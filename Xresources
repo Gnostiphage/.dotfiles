@@ -51,10 +51,10 @@ Xft.rgba:       rgb
 *.dpi:        128
 
 !! URxvt Appearance
-URxvt.font:             xft:IBM Plex Mono:style=Text:pixelsize=21,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:symbola:size=21:minspace=False,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
-URxvt.boldFont:         xft:IBM Plex Mono:style=SemiBold:pixelsize=21,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:symbola:size=21:minspace=False,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
-URxvt.italicFont:       xft:IBM Plex Mono:style=Text Italic:pixelsize=21,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:symbola:size=21:minspace=False,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
-URxvt.boldItalicfont:   xft:IBM Plex Mono:style=SemiBold Italic:pixelsize=21,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:symbola:size=21:minspace=False,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.font:             xft:IBM Plex Mono:style=Text:pixelsize=21,xft:symbola:size=21:minspace=False,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.boldFont:         xft:IBM Plex Mono:style=SemiBold:pixelsize=21,xft:symbola:size=21:minspace=False,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.italicFont:       xft:IBM Plex Mono:style=Text Italic:pixelsize=21,xft:symbola:size=21:minspace=False,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
+URxvt.boldItalicfont:   xft:IBM Plex Mono:style=SemiBold Italic:pixelsize=21,xft:symbola:size=21:minspace=False,xft:BlexMono Nerd Font Mono:style=Text:pixelsize=21,xft:Unifont:pixelsize=15:minspace=False,xft:Unifont Upper:pixelsize=15:minspace=False
 URxvt.letterSpace:      -1
 URxvt.lineSpace:        0
 URxvt.geometry:         92x24
