@@ -66,7 +66,7 @@ xrdb -merge ~/.Xresources
 
 install_tool () {
 # Test to see if binary is in the PATH variable, and if not, install
-if [ -f $(find $(echo $PATH | sed 's/:/ /g') -name $1) ]; then
+if find $(echo $PATH | sed 's/:/ /g') -name $1 | grep . ; then
     echo "$1 is already installed"
 else
     echo "$1 is not installed"
