@@ -44,7 +44,7 @@ ln -s ../tmux-plugins $dir/tmux/plugins
 ln -s $dir/ranger ~/.config/ranger
 
 # if fzf isn't installed, install it
-if [[ ! -f /usr/bin/fzf ]]; then
+if [[ ! -f $(which fzf) ]]; then
     ~/.fzf/install
 fi
 
@@ -65,15 +65,11 @@ rm $dir/mycron
 xrdb -merge ~/.Xresources
 
 install_tool () {
-# Test to see if zshell is installed.  If it is:
-if [ -f /bin/$1 -o -f /usr/bin/$1 ]; then
-    if [[ $1 == "zsh" ]]; then
-        # Set the default shell to zsh if it isn't currently set to zsh
-        if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
-            chsh -s $(which zsh)
-        fi
-    fi
+# Test to see if binary is in the PATH variable, and if not, install
+if [ -f $(find $(echo $PATH | sed 's/:/ /g') -name $1) ]; then
+    echo "$1 is already installed"
 else
+    echo "$1 is not installed"
     # If the tool isn't installed, get the platform of the current machine
     platform=$(uname);
     # If the platform is Linux, try a package manager to install zsh and then recurse
@@ -107,6 +103,15 @@ else
 fi
 }
 
-for i in {zsh,urxvt,vim,tmux,wmctrl,grc}; do
+# set zsh as default shell, install if necessary
+if [[ ! $(echo $SHELL) == $(which zsh) ]]; then
+    if [ ! -f $(which zsh) ]; then
+        install_tool zsh
+    fi
+    chsh -s $(which zsh)
+fi
+
+for i in {rxvt-unicode,vim,tmux,wmctrl,grc,thefuck,ranger}; do
+    echo "checking to see if $1 is installed"
     install_tool $i
 done
