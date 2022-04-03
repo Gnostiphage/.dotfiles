@@ -105,3 +105,6 @@
 [submodule "tmux-plugins/tmux-uptime-8601"]
 	path = tmux-plugins/tmux-uptime-8601
 	url = https://github.com/Gnostiphage/tmux-uptime-8601.git
+[submodule "tmux-plugins/tmux-logging"]
+	path = tmux-plugins/tmux-logging
+	url = https://github.com/tmux-plugins/tmux-logging.git
