@@ -125,7 +125,7 @@ eval $(thefuck --alias)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # shortcut for tmux
-bindkey -s '^[t' 'TERM=screen-256color tmux -u attach || TERM=screen-256color tmux -u new\n'
+bindkey -s '^[t' 'if test -z "$SSH_CLIENT" ; then TERM=screen-256color tmux -L tmux.local -u attach || TERM=screen-256color tmux -L tmux.local -u new ; else TERM=screen-256color tmux -L tmux.remote -u attach || TERM=screen-256color tmux -L tmux.remote -u new ; fi\n'
 
 # p10k is great, but let's keep everything in .dotfiles, 
 # and customize based on who/where we are
